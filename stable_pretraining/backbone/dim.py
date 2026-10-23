@@ -1,4 +1,4 @@
-"""Critic networks for Deep InfoMax (DIM) :cite:`hjelm2019learning`."""
+"""Critic networks for Deep InfoMax (DIM) :cite:`hjelm2019learningdeeprepresentationsmutual`."""
 
 import torch
 import torch.nn as nn

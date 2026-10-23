@@ -1,9 +1,10 @@
 """Deep InfoMax (DIM) losses.
 
 This module contains the objectives of local Deep InfoMax
-:cite:`hjelm2019learning`: a Jensen-Shannon mutual information estimator
-between a global feature vector and every location of a local feature map,
-and the optional adversarial prior matching term on the global feature.
+:cite:`hjelm2019learningdeeprepresentationsmutual`: a Jensen-Shannon mutual
+information estimator between a global feature vector and every location of
+a local feature map, and the optional adversarial prior matching term on the
+global feature.
 """
 
 import math
@@ -14,7 +15,7 @@ from torch.func import functional_call
 
 
 class LocalDIMLoss(torch.nn.Module):
-    """Jensen-Shannon local DIM objective :cite:`hjelm2019learning`.
+    """Jensen-Shannon local DIM objective :cite:`hjelm2019learningdeeprepresentationsmutual`.
 
     Takes a tensor of critic scores ``scores[a, b, i]`` comparing the global
     feature of image ``a`` with location ``i`` of the local feature map of
@@ -62,7 +63,7 @@ class LocalDIMLoss(torch.nn.Module):
 
 
 class DIMPriorLoss(torch.nn.Module):
-    """Adversarial prior matching term of DIM :cite:`hjelm2019learning`.
+    """Adversarial prior matching term of DIM :cite:`hjelm2019learningdeeprepresentationsmutual`.
 
     A discriminator learns to tell samples of a uniform prior on ``[0, 1]^D``
     from ``sigmoid(embedding)``, while the encoder is trained to fool it

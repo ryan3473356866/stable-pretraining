@@ -1295,7 +1295,7 @@ def local_dim(self, batch: dict[str, Any], stage: str) -> dict[str, torch.Tensor
             - 'label': Labels if present (for probes/callbacks)
 
     Note:
-        Introduced in the Deep InfoMax paper :cite:`hjelm2019learning`. Only
+        Introduced in the Deep InfoMax paper :cite:`hjelm2019learningdeeprepresentationsmutual`. Only
         the local objective (and optional prior) is implemented; the global
         DIM objective is not. The discriminator loss of the prior term is
         added to ``loss`` with weight 1, as in the reference implementation;
