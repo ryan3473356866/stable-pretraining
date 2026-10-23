@@ -1,1 +1,0 @@
-# Local Deep InfoMax (DIM)
